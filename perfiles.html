@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satori Kai</title>
+  <link rel="shortcut icon" href="logito.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href=https://www.facebook.com/profile.php?id=100093318325565" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Satorikaiweb" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/plataformasatorikai/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@Satorikai" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div class="header-alert-news" >
+          <p>
+            <b>¿Estás interesado en expandir tus conocimientos?</b>
+          </p>
+        </div>
+        <style>
+          .header-alert-news {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="logo.png" alt="Mori yuki" width="45" height="40">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Buscar..."
+                 data-keywords="buzo hoodie sweatshirt sweater">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        
+
+        <div class="header-user-actions">
+
+          <div class="header-user-actions">
+            <button class="action-btn" data-modal-open id="openModalBtn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+          </div>   
+          <script>
+            document.getElementById("openModalBtn").addEventListener("click", function() {
+                window.location.href = "modal.html";
+            });
+            </script>       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Inicio</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="Explorar.html" class="menu-title">Explora</a>
+
+            
+          </li>
+
+          <li class="menu-category">
+            <a href="perfiles.html" class="menu-title">Perfiles</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="foro.html" class="menu-title">Foro de discusión</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="blog.html" class="menu-title">Blogs</a>
+
+      
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    
+
+  </header>
+
+<br>
+  <main>
+	
+	 
+    <div class="profile-card">
+    
+      <div class="image">
+          <img src="jhon.png" alt="" class="profile-img">
+      </div>
+  
+      <div class="text-data">
+          <span class="name">Jhon Smith</span>
+          <span class="job">Programador</span>
+      </div>
+      
+      <div class="buttons">
+        <a href="2.html?userId=12346" class="user-card-link"><button class="button">Ver perfil</button></a> 
+      </div>
+
+
+    </div>
+ 
+        <div class="profile-card">
+    
+            <div class="image">
+                <img src="descarga.png" alt="" class="profile-img">
+            </div>
+        
+            <div class="text-data">
+                <span class="name">Emily Jhonson</span>
+                <span class="job">Profesora de Lieratura</span>
+            </div>
+            
+            <div class="buttons">
+              <a href="3.html?userId=12346" class="user-card-link"><button class="button">Ver perfil</button></a> 
+            </div>
+    
+
+        </div>
+        
+        <div class="profile-card">
+    
+          <div class="image">
+              <img src="descarga (2).png" alt="" class="profile-img">
+          </div>
+      
+          <div class="text-data">
+              <span class="name">Michael Brown</span>
+              <span class="job">Artista</span>
+          </div>
+          
+          <div class="buttons">
+            <a href="4.html?userId=12346" class="user-card-link"><button class="button">Ver perfil</button></a> 
+          </div>
+  
+
+      </div>
+
+      <style>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjust the height to leave space for the header and footer */
+    background-color: #ffffff;
+  }
+
+  .profile-card {
+    width: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust the margins and padding for the profile cards */
+  .profile-card:first-child {
+    margin-left: 0;
+  }
+
+  .profile-card:last-child {
+    margin-right: 0;
+  }
+      
+        .image {
+          position: relative;
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          background-color: #66c2ff;
+          padding: 5px;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .image .profile-img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 2px solid #fff;
+          border-radius: 50%;
+        }
+      
+        .text-data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #333;
+        }
+      
+        .text-data .name {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      
+        .text-data .job {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      
+        .buttons {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 15px;
+        }
+      
+        .buttons .button {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 400;
+          border: none;
+          border-radius: 24px;
+          margin: 10px 0;
+          padding: 8px 24px;
+          background-color: #66c2ff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+      
+        .buttons .button:hover {
+          background-color: #4c98ca;
+        }
+        header,
+        footer {
+    margin-bottom: 1px;
+  }
+      </style>
+  </main>
+<br>
+<br>
+  <footer>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="logito.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Satori kai</a> todos los derechos reservados.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('userId');
+      document.querySelector('[data-modal-open]').addEventListener("click", function() {
+  document.querySelector('.modal').style.display = "block";
+});
+
+    // Verificar si el usuario ya está registrado
+    const userRegistered = localStorage.getItem("userRegistered");
+    
+    // Si el usuario no está registrado, mostrar el modal
+    if (!userRegistered) {
+      document.querySelector('[data-modal]').style.display = "block";
+    }
+  
+    // Manejar el envío del formulario
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario para el ejemplo
+            
+      // Ocultar el modal después del registro
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  
+    // Manejar el cierre del modal
+    document.querySelector('[data-modal-close]').addEventListener("click", function() {
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+
+	document.getElementById("searchForm").addEventListener("submit", function (event) {
+		event.preventDefault();
+
+		const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+		let destinationUrl = "";
+
+		switch (searchTerm) {
+			case "inicio":
+				destinationUrl = "index.html";
+				break;
+			case "explora":
+				destinationUrl = "Explorar.html";
+				break;
+			case "perfiles":
+				destinationUrl = "perfiles.html";
+				break;
+			case "foro":
+				destinationUrl = "foro.html";
+				break;
+			case "blog":
+			case "recursos":
+				destinationUrl = "blog.html";
+				break;
+			default:
+				// Handle other search terms or display a message if nothing matches
+				alert("No se encontraron resultados para la búsqueda.");
+				return;
+		}
+
+		window.location.href = destinationUrl;
+	});
+
+src="https://kit.fontawesome.com/81581fb069.js"
+crossorigin="anonymous"
+
+const openModalBtn = document.getElementById("openModalBtn");
+const modalRegister = document.getElementById("modal-register");
+
+// Function to show or hide the registration form when the user clicks the user icon
+function toggleRegistrationForm() {
+  modalRegister.style.display = modalRegister.style.display === "flex" ? "none" : "flex";
+}
+
+// Assign the click event to the user icon
+openModalBtn.addEventListener("click", toggleRegistrationForm);
+
+// Close the modal if the user clicks outside of it
+window.onclick = function (event) {
+  if (event.target === modalRegister) {
+	modalRegister.style.display = "none";
+  }
+};
+
+// Function to show the login form and hide the registration form
+function showLoginForm() {
+  document.getElementById("loginFormContainer").style.display = "flex";
+  document.getElementById("registrationFormContainer").style.display = "none";
+}
+
+// Function to show the registration form and hide the login form
+function showRegisterForm() {
+  document.getElementById("registrationFormContainer").style.display = "flex";
+  document.getElementById("loginFormContainer").style.display = "none";
+}
+
+// Set the initial state to show the login form
+showLoginForm();
+
+function hideModal() {
+document.getElementById("modal-register").style.display = "none";
+}
+
+// Function to show the login form and hide the registration form
+function showLoginForm() {
+document.getElementById("loginFormContainer").style.display = "flex";
+document.getElementById("registrationFormContainer").style.display = "none";
+}
+
+
+// Set the initial state to show the login form
+showLoginForm();
+
+function hideModal() {
+document.getElementById("modal-register").style.display = "none";
+}
+
+// Function to handle registration form submission
+function handleRegistration(event) {
+event.preventDefault();
+const username = document.getElementById("username").value;
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+// You can add validation here before calling the registerUser function
+registerUser(username, email, password);
+// After successful registration, you can show the login form
+showLoginForm();
+}
+
+// Assign the form submit event to the registration form
+document.getElementById("registrationForm").addEventListener("submit", handleRegistration);
+</script>
+
+</body>
+</html> 

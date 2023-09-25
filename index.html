@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satori Kai</title>
+  <link rel="shortcut icon" href="logito.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href=https://www.facebook.com/profile.php?id=100093318325565" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Satorikaiweb" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/plataformasatorikai/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@Satorikai" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div class="header-alert-news" >
+          <p>
+            <b>¿Estás interesado en expandir tus conocimientos?</b>
+          </p>
+        </div>
+        <style>
+          .header-alert-news {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="logo.png" alt="Mori yuki" width="45" height="40">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Buscar..."
+                 data-keywords="buzo hoodie sweatshirt sweater">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        
+
+        <div class="header-user-actions">
+
+          <div class="header-user-actions">
+            <button class="action-btn" data-modal-open id="openModalBtn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+          </div>   
+          <script>
+            document.getElementById("openModalBtn").addEventListener("click", function() {
+                window.location.href = "modal.html";
+            });
+            </script>       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Inicio</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="Explorar.html" class="menu-title">Explora</a>
+
+            
+          </li>
+
+          <li class="menu-category">
+            <a href="perfiles.html" class="menu-title">Perfiles</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="foro.html" class="menu-title">Foro de discusión</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="blog.html" class="menu-title">Blogs</a>
+
+      
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    
+
+  </header>
+
+<br>
+  <main>
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="banner2-transformed.jpeg" alt="." class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">¿Tienes una pasión o experiencia que deseas compartir?
+              </p>
+              <style>
+                .banner-subtitle {
+                  font-size: smaller;
+                }
+              </style>
+              <h2 class="banner-title">Aprende y comparte habilidades en diversas áreas.</h2>
+
+
+              <a href="Explorar.html" class="banner-btn">Explorar</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!--
+      - CATEGORY
+    -->
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+
+          <div class="category-item">
+
+            <div class="category-content-box">
+              <a href="#" class="category-btn">Comparte</a>
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Puedes compartir tus conocimientos
+                </h3>
+
+                <p class="category-item-amount"></p>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-content-box">
+              <a href="#" class="category-btn">Aprende</a>
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Hay varias cosas nuevas por aprender
+                </h3>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-content-box">
+              <a href="#" class="category-btn">Descubre</a>
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Encuentra nuevas oportunidades de aprendizaje y crecimiento
+
+                </h3>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+            <div class="category-content-box">
+              <a href="#" class="category-btn">Conectate</a>
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">establece conexiones con otros usuarios, mentores y expertos
+                </h3>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="product-container">
+
+      <div class="container">
+
+        <div class="product-box">
+
+          <div class="product-featured">
+
+            <h2 class="title">¡Bienvenidos a nuestra comunidad colaborativa y enriquecedora!
+            </h2>
+
+            <div class="showcase-wrapper has-scrollbar">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+                  
+                  <div class="showcase-banner">
+                    <img src="bienvenido.png" alt="" class="showcase-img">
+                  </div>
+
+                  <div class="showcase-content">
+                    
+
+                    <a href="#">
+                      <h3 class="showcase-title">Un espacio de colaboración y aprendizaje para todos
+
+                      </h3>
+                    </a>
+
+                    <p class="showcase-desc">
+                      En este espacio, los usuarios tienen la oportunidad de compartir y aprender habilidades en diversas áreas, creando un ambiente propicio para el crecimiento personal y profesional. Nuestro objetivo es fomentar la colaboración y el intercambio de conocimiento entre personas con intereses similares, brindando un espacio enriquecedor y motivador para el desarrollo de habilidades y el crecimiento conjunto. Aquí, cada individuo puede encontrar un lugar donde compartir sus conocimientos y aprender de otros, fortaleciendo así la comunidad y promoviendo el aprendizaje continuo.
+
+                    </p>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+          <div class="product-main">
+
+            <h2 class="title">¿Qué ofrecemos?  </h2>
+
+            <div class="product-grid">
+
+              <div class="showcase">
+
+
+                <div class="showcase-content">
+
+                  <a href="#" class="showcase-category">Explorar</a>
+
+                  <a href="#">
+                    <h3 class="showcase-title">Explora las distintas opciones que ofrecemos y descubre cómo puedes mejorar tus habilidades mientras conectas con una comunidad apasionada por el conocimiento.
+                    </h3>
+                  </a>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+              
+                <div class="showcase-content">
+                  <a href="#" class="showcase-category">Versatilidad</a>
+              
+                  <h3>
+                    <a href="#" class="showcase-title">Desde programación y diseño gráfico hasta cocina y habilidades de liderazgo, nuestra plataforma te ofrece la posibilidad de aprender a tu propio ritmo y desde cualquier lugar.
+                    </a>
+                  </h3>
+              
+              
+              
+                </div>
+              
+              </div>
+
+
+              <div class="showcase">
+
+
+                <div class="showcase-content">
+
+                  <a href="#" class="showcase-category">Conexión</a>
+
+                  <a href="#">
+                    <h3 class="showcase-title">Conéctate con personas de todo el mundo que comparten tus intereses y metas.
+                    </h3>
+                  </a>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+              
+                <div class="showcase-content">
+                  <a href="figure.html" class="showcase-category">colaboración</a>
+              
+                  <h3>
+                    <a href="figure.html" class="showcase-title">Trabaja en conjunto con otras personas, comparte ideas y conocimientos, y aprende de diferentes perspectivas.</a>
+                  </h3>
+              
+              
+              
+                </div>
+              
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <div class="container">
+
+        <div class="testimonials-box">
+
+
+        <div class="testimonial">
+
+          <h2 class="title">Testimonio</h2>
+
+          <div class="testimonial-card">
+
+            <img src="logito.png" alt="alan doe" class="testimonial-banner" width="80" height="80">
+
+            <p class="testimonial-name">Satori Kai</p>
+
+            <p class="testimonial-title">Pagina para compartir conocimiento</p>
+
+            <img src="comillas.png" alt="quotation" class="quotation-img" width="26">
+
+            <p class="testimonial-desc">
+El fin de la creación de esta página fue para compartir los conocimientos de todas las areas que puedas imaginar              </p>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+          <!--
+            - CTA
+          -->
+
+          <div class="cta-container">
+
+            <img src="km,ñm.jpg" alt="Mangas" class="cta-banner">
+
+            <a href="#" class="cta-content">
+
+              <p class="discount">Aprende</p>
+
+              <h2 class="cta-title">Comparte</h2>
+
+              <p class="cta-text">Enseña</p>
+
+              <button class="cta-btn">Explora</button>
+
+            </a>
+
+          </div>
+
+
+
+          <!--
+            - SERVICE
+          -->
+
+          <div class="service">
+
+            <h2 class="title">Contactate</h2>
+
+            <div class="service-container">
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="boat-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Explora</h3>
+                  <p class="service-desc">Conectate con personas de varios lugares</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Expande tu conocimiento</h3>
+                  <p class="service-desc">Puedes descubrir cosas inimaginables</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Conecta con profesionales</h3>
+                  <p class="service-desc">Habla por los foros con diversas personas</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="arrow-undo-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Responde blog y foros</h3>
+                  <p class="service-desc">Devuelve la respuesta a cualquier pregunta</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="ticket-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Gratis</h3>
+                  <p class="service-desc">No necesitas pagar para obtener conocimiento nuevo</p>
+              
+                </div>
+              
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+  <footer>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="logito.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Satori kai</a> todos los derechos reservados.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+
+ 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+      document.querySelector('[data-modal-open]').addEventListener("click", function() {
+  document.querySelector('.modal').style.display = "block";
+});
+
+    // Verificar si el usuario ya está registrado
+    const userRegistered = localStorage.getItem("userRegistered");
+    
+    // Si el usuario no está registrado, mostrar el modal
+    if (!userRegistered) {
+      document.querySelector('[data-modal]').style.display = "block";
+    }
+  
+    // Manejar el envío del formulario
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario para el ejemplo
+            
+      // Ocultar el modal después del registro
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  
+    // Manejar el cierre del modal
+    document.querySelector('[data-modal-close]').addEventListener("click", function() {
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satori Kai</title>
+  <link rel="shortcut icon" href="logito.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href=https://www.facebook.com/profile.php?id=100093318325565" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Satorikaiweb" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/plataformasatorikai/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@Satorikai" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div class="header-alert-news" >
+          <p>
+            <b>¿Estás interesado en expandir tus conocimientos?</b>
+          </p>
+        </div>
+        <style>
+          .header-alert-news {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="logo.png" alt="Mori yuki" width="45" height="40">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Buscar..."
+                 data-keywords="buzo hoodie sweatshirt sweater">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        
+
+        <div class="header-user-actions">
+
+          <div class="header-user-actions">
+            <button class="action-btn" data-modal-open id="openModalBtn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+          </div>   
+          <script>
+            document.getElementById("openModalBtn").addEventListener("click", function() {
+                window.location.href = "modal.html";
+            });
+            </script>       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Inicio</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="Explorar.html" class="menu-title">Explora</a>
+
+            
+          </li>
+
+          <li class="menu-category">
+            <a href="perfiles.html" class="menu-title">Perfiles</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="foro.html" class="menu-title">Foro de discusión</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="blog.html" class="menu-title">Blogs</a>
+
+      
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    
+
+  </header>
+
+<br>
+  <main>
+
+
+    <style type="text/css">
+
+ .contenedor-comentarios {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+main {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+      .contenedor-comentarios {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: 100%;
+      }
+      
+      .contenedor-comentarios img {
+          width: 100%;
+      }
+      
+      .area-comentar {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          margin-bottom: 1.5rem;
+          padding: 18px;
+          background-color: #fff;
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+          border-radius: 12px;
+      }
+      
+      .comentarios-usuarios {
+          width: calc(100% - 2.5rem);
+      }
+      
+      .contenedor-comentarios a {
+          text-decoration: none;
+      }
+      
+      .comentar-publicacion .avatar,
+      .publicacion-realizada .usuario-publico .avatar,
+      .contenedor-comentarios .comentario-principal-usuario .avatar,
+      .area-comentar .avatar {
+          display: flex;
+          width: 65px;
+          height: 65px;
+          background-color: #F4F4F4;
+          border-radius: 50%;
+          overflow: hidden;
+      }
+      .comentarios-usuarios .nombre-usuario {
+          font-weight: bold;
+          margin-right: .5rem;
+          color: inherit;
+      }
+      /* botones comentar */
+      .boton-subir-archivo {
+          position: relative;
+          display: inline-block;
+      }
+      
+      .boton-subir-archivo input[type="file"] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+          height: 0;
+      }
+      
+      .boton-file,
+      .boton-enviar {
+          display: inline-block;
+          border: 0;
+          background-color: #66c2ff;
+          padding: 7px 15px;
+          margin-right: .5rem;
+          color: #fff;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color ease-in 200ms;
+      }
+      
+      .boton-file:hover,
+      .boton-enviar:hover {
+          background-color: #66c2ff;
+      }
+      
+      /* fin */
+      .contenedor-comentarios .comentario-principal-usuario .comentario,
+      .area-comentar .inputs-comentarios {
+          flex-grow: 1;
+          flex-basis: 0;
+          margin-left: .5rem;
+      }
+      
+      .area-comentar .inputs-comentarios {
+          margin-left: 1rem;
+      }
+      
+      .contenedor-comentarios .comentario-principal-usuario .texto,
+      .area-comentar .inputs-comentarios .area-comentario {
+          border: 0;
+          background-color: #F0F0F0;
+          display: block;
+          width: 100%;
+          border-radius: 12px;
+          margin-bottom: .5rem;
+      }
+      
+      .botones-comentario span.tiempo-comentario {
+          font-size: 0.8rem !important;
+          color: #9F9F9F;
+          margin-left: .25rem;
+      }
+      
+      .area-comentar .inputs-comentarios .area-comentario {
+          padding: 12px 15px;
+      }
+      
+      .area-comentar .inputs-comentarios .botones-comentar {
+          display: flex;
+      }
+      
+      /* comentarios de usuario */
+      .comentarios-usuarios .comentario-principal-usuario {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .comentarios-usuarios .usuario-comentario {
+          width: 100%;
+          display: block;
+          margin-bottom: 0.75rem;
+          position: relative;
+      }
+      
+      .menu-comentario {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: #E9E9E9;
+          border-radius: 50%;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+      }
+      
+      .comentarios-usuarios .usuario-comentario .menu-comentario {
+          top: 5px;
+          right: -15px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+      }
+      
+      .comentarios-usuarios .usuario-comentario:hover .menu-comentario {
+          display: flex;
+      }
+      
+      .publicacion-realizada .menu-comentario {
+          display: flex;
+          right: 0;
+      }
+      
+      .menu-comentario .menu {
+          list-style: none;
+          position: absolute;
+          right: 100%;
+          background-color: #fff;
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+          border-radius: 8px;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all ease-in 200ms;
+      }
+      
+      .menu-comentario:hover .menu {
+          opacity: 1;
+          visibility: visible;
+      }
+      
+      .menu-comentario .menu a {
+          display: block;
+          padding: 7px 15px;
+          color: inherit;
+      }
+      
+      .menu-comentario .menu a:hover {
+          background-color: #E1E1E1;
+      }
+      
+      .publicacion-realizada .usuario-publico .avatar,
+      .comentarios-usuarios .comentario-principal-usuario .avatar {
+          width: 45px;
+          height: 45px;
+      }
+      
+      .comentarios-usuarios .comentario-principal-usuario .texto {
+          padding: 10px 15px;
+          width: auto;
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: .25rem;
+          font-size: 0.9rem;
+          position: relative;
+          padding-right: 1.65rem;
+      }
+      
+      .comentarios-usuarios .comentario-principal-usuario .comentar-comentario {
+          width: 100%;
+          display: flex;
+      }
+      
+      .comentarios-usuarios .comentar-publicacion input[type="text"] {
+          border: 0;
+          background-color: #E1E1E1;
+          flex-grow: 1;
+          flex-basis: 0;
+          padding: 8px 10px;
+          font-size: .9rem;
+          border-radius: 8px;
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
+      }
+      
+      .botones-comentario {
+          display: block;
+      }
+      
+      .botones-comentario button {
+          display: inline-block;
+          border: 0;
+          padding: 3px 8px;
+          font-size: .8rem;
+          border-radius: 8px;
+          cursor: pointer;
+      }
+      
+      .botones-comentario button:hover {
+          background-color: #D5D8E1;
+      }
+      
+      .comentar-publicacion .avatar,
+      .contenedor-sub-comentarios .comentario-principal-usuario .avatar {
+          width: 32px;
+          height: 32px;
+      }
+      
+      .boton-enviar i,
+      .boton-file i,
+      .boton-puntuar i,
+      .boton-responder i {
+          margin-right: .5rem;
+      }
+      
+      /* publicacion realizada */
+      .publicacion-realizada {
+          margin-bottom: 1.5rem;
+      }
+      
+      .publicacion-realizada .usuario-publico {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: .5rem;
+          position: relative;
+      }
+      
+      .publicacion-realizada .usuario-publico .contenido-publicacion {
+          margin-left: 1rem;
+      }
+      
+      .comentar-publicacion {
+          display: flex;
+          width: 100%;
+      }
+      
+      .comentar-publicacion .comentar-comentario {
+          flex-grow: 1;
+          flex-basis: 0;
+          display: flex;
+          align-items: center;
+      }
+      
+      .publicacion-realizada p {
+          margin-bottom: 0.5rem;
+          font-size: 0.9em;
+      }
+      
+      .archivo-publicado img {
+          position: relative;
+          width: 100%;
+          border-radius: 8px;
+      }
+      
+      .publicacion-realizada .contenido-publicacion ul {
+          list-style: none;
+          font-size: 0.8em;
+          color: #909090;
+      }
+      </style>
+
+      <section class="contenedor-comentarios">
+          <div class="area-comentar">
+              <div class="avatar">
+                  <img src="descarga.png" alt="img">
+              </div>
+              <form action="#" method="post" class="inputs-comentarios">
+                  <textarea name="" class="area-comentario"></textarea>
+                  <div class="botones-comentar">
+                      <div class="boton-subir-archivo">
+                          <label class="boton-file" for="adjuntar">
+                              <i class="far fa-image"></i>
+                              Adjuntar archivo
+                          </label>
+                          <input type="file" name="" value="" placeholder="" id="adjuntar">
+                      </div>
+                      <button class="boton-enviar" type="sutmit">
+                          <i class="fas fa-paper-plane"></i>
+                          Enviar
+                      </button>
+                  </div>
+              </form>
+          </div>
+          <div class="publicacion-realizada">
+              <div class="usuario-publico">
+                  <div class="avatar">
+                      <img src="descarga (2).png" alt="img">
+                  </div>
+                  <div class="contenido-publicacion">
+                      <h4>Michael Brown</h4>
+                      <ul>
+                          <li>Hace 3 min</li>
+                      </ul>
+                  </div>
+                  <div class="menu-comentario">
+                      <i class="fas fa-pen"></i>
+                      <ul class="menu">
+                          <li><a href="">Editar</a></li>
+                          <li><a href="">Eliminar</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <p>¡Sabias que a lo largo del tiempo, las esculturas de mármol han perdido el color que alguna vez tuvieron? La pintura inicial se ha desvanecido o desgastado, dejando las esculturas en su estado natural de mármol blanco. Esto ha permitido apreciar la belleza y la expresividad de la piedra en sí misma.</p>
+              <div class="archivo-publicado">
+                  <img src="colores.png" alt="img">
+              </div>
+              <div class="botones-comentario">
+                  <button type="" class="boton-puntuar">
+                      <i class="fas fa-thumbs-up"></i>
+                      45
+                  </button>
+                  <button type="" class="boton-responder">
+                      Comentar
+                  </button>
+              </div>
+          </div>
+          <div class="comentarios-usuarios">
+              <!-- comentario principal -->
+              <div class="comentario-principal-usuario">
+                  <div class="avatar">
+                      <img src="jhon.png" alt="img">
+                  </div>
+                  <div class="comentario">
+                      <div class="usuario-comentario">
+                          <div class="texto">
+                              <a href="#" title="" class="nombre-usuario">Jhon Smith</a>Es realmente sorprendente cómo las esculturas de mármol han resistido el paso del tiempo y, a pesar de perder su color original, han logrado transmitir su belleza de una manera aún más impactante. El hecho de que la pintura inicial se haya desvanecido o desgastado nos permite apreciar la pureza y la expresividad del mármol blanco en su forma más natural. Es como si estas esculturas hubieran adquirido una nueva vida, revelando su esencia y su poder de una manera deslumbrante.
+                              <div class="menu-comentario">
+                                  <i class="fas fa-pen"></i>
+                                  <ul class="menu">
+                                      <li><a href="">Editar</a></li>
+                                      <li><a href="">Eliminar</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="botones-comentario">
+                              <button type="" class="boton-puntuar">
+                                  <i class="fas fa-thumbs-up"></i>
+                                  5
+                              </button>
+                              <button type="" class="boton-responder">
+                                  responrder
+                              </button>
+                              <span class="tiempo-comentario">
+                                  hece 3 min
+                              </span>
+                          </div>
+                      </div>
+      
+                      <!-- contenedor sub comentarios -->
+                      <div class="contenedor-sub-comentarios">
+                          <!-- sub-comentario uno -->
+                          <div class="comentario-principal-usuario">
+                              <div class="avatar">
+                                  <img src="descarga.png" alt="img">
+                              </div>
+                              <div class="comentario">
+                                  <div class="usuario-comentario">
+                                      <div class="texto">
+                                          <a href="#" title="" class="nombre-usuario">Emily Jhonson
+                                          </a> ¡Es cierto! No se mucho sobre la historia de las eculturas pero es impresionante que hayan pasado tantos años y sigan intactas, son una maravilla.
+                                          <div class="menu-comentario">
+                                              <i class="fas fa-pen"></i>
+                                              <ul class="menu">
+                                                  <li><a href="">Editar</a></li>
+                                                  <li><a href="">Eliminar</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <div class="botones-comentario">
+                                          <button type="" class="boton-puntuar">
+                                              <i class="fas fa-thumbs-up"></i>
+                                              12
+                                          </button>
+                                          <button type="" class="boton-responder">
+                                              responrder
+                                          </button>
+                                          <span class="tiempo-comentario">
+                                              hece 3 min
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+      
+                  </div>
+      
+              </div>
+      
+              <div class="comentar-publicacion">
+                  <div class="avatar">
+                      <img src="descarga.png" alt="img">
+                  </div>
+                 <form action="#" method="post" class="comentar-comentario">
+                     <input type="text" name="" value="" placeholder="">
+                     <button type="" class="boton-enviar">
+                         <i class="fas fa-paper-plane"></i>
+                     </button>
+                 </form>
+              </div>
+              
+          </div>
+      </section>
+      <style>
+      .mensaje a {
+          color: inherit;
+          margin-right: .5rem;
+          display: inline-block;
+      }
+      .mensaje a:hover {
+          color: #309B76;
+          transform: scale(1.4)
+      }
+      </style>
+
+
+
+  </main>
+<br>
+<br>
+  <footer>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="logito.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Satori kai</a> todos los derechos reservados.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+
+ 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+      document.querySelector('[data-modal-open]').addEventListener("click", function() {
+  document.querySelector('.modal').style.display = "block";
+});
+
+    // Verificar si el usuario ya está registrado
+    const userRegistered = localStorage.getItem("userRegistered");
+    
+    // Si el usuario no está registrado, mostrar el modal
+    if (!userRegistered) {
+      document.querySelector('[data-modal]').style.display = "block";
+    }
+  
+    // Manejar el envío del formulario
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario para el ejemplo
+            
+      // Ocultar el modal después del registro
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  
+    // Manejar el cierre del modal
+    document.querySelector('[data-modal-close]').addEventListener("click", function() {
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  </script>
+
+</body>
+
+</html>

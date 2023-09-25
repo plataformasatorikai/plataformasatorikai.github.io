@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satori Kai</title>
+  <link rel="shortcut icon" href="images/logito.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+<body>
+  <header>
+
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href=https://www.facebook.com/profile.php?id=100093318325565" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Satorikaiweb" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/plataformasatorikai/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@Satorikai" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div class="header-alert-news" >
+          <p>
+            <b>¿Estás interesado en expandir tus conocimientos?</b>
+          </p>
+        </div>
+        <style>
+          .header-alert-news {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="logo.png" alt="Mori yuki" width="45" height="40">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Buscar..."
+                 data-keywords="buzo hoodie sweatshirt sweater">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        
+
+        <div class="header-user-actions">
+
+          <div class="header-user-actions">
+            <button class="action-btn" data-modal-open id="openModalBtn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+          </div>   
+          <script>
+            document.getElementById("openModalBtn").addEventListener("click", function() {
+                window.location.href = "modal.html";
+            });
+            </script>       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Inicio</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="Explorar.html" class="menu-title">Explora</a>
+
+            
+          </li>
+
+          <li class="menu-category">
+            <a href="perfiles.html" class="menu-title">Perfiles</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="foro.html" class="menu-title">Foro de discusión</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="blog.html" class="menu-title">Blogs</a>
+
+      
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    
+
+  </header>
+<br>
+<main>
+  <section>
+    <h2>Escribir un nuevo blog</h2>
+    <form id="blog-form">
+      <input type="text" id="blog-title" placeholder="Título del blog" required>
+      <textarea id="blog-content" placeholder="Contenido del blog" required></textarea>
+      <input type="text" id="blog-category" placeholder="Categoría" required>
+      <input type="file" id="blog-media" accept="image/*, video/*">
+      <label for="blog-media" class="custom-file-upload">Seleccionar un archivo</label>
+      <br>
+      <br>      
+      <button type="submit">Publicar</button>
+    </form>
+  </section>
+  
+  <section id="blog-posts">
+    <h2>Publicaciones</h2>
+    <div id="post-list"></div>
+  </section>
+</main>
+<script>
+  document.getElementById('blog-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var title = document.getElementById('blog-title').value;
+    var content = document.getElementById('blog-content').value;
+    var category = document.getElementById('blog-category').value;
+    var media = document.getElementById('blog-media').files[0];
+    var user = {
+      name: "Angelina Genoud", // Cambia por el nombre del usuario actual
+      avatar: "images/jk.webp ",// Cambia por la ruta de la foto de perfil del usuari
+    };
+
+    var postElement = document.createElement('div');
+    postElement.classList.add('post');
+    postElement.innerHTML = `
+      <div class="user-info">
+        <img src="${user.avatar}" alt="${user.name}"> ${user.name}
+      </div>
+      <h3>${title}</h3>
+      <p>${content}</p>
+      <div class="post-details">
+        Categoría: ${category} | Fecha de publicación: ${new Date().toLocaleDateString()}
+      </div>
+    `;
+
+    if (media) {
+      var mediaElement = document.createElement('img');
+      mediaElement.setAttribute('src', URL.createObjectURL(media));
+      mediaElement.classList.add('media');
+      postElement.appendChild(mediaElement);
+    }
+
+    
+    postElement.appendChild(deleteButton);
+
+    document.getElementById('post-list').appendChild(postElement);
+
+    document.getElementById('blog-title').value = '';
+    document.getElementById('blog-content').value = '';
+    document.getElementById('blog-category').value = '';
+    document.getElementById('blog-media').value = null;
+  });
+
+  document.getElementById('blog-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var title = document.getElementById('blog-title').value;
+    var content = document.getElementById('blog-content').value;
+    var media = document.getElementById('blog-media').files[0];
+
+    var postElement = document.createElement('div');
+    postElement.classList.add('post');
+    postElement.innerHTML = `
+      <h3>${title}</h3>
+      <p>${content}</p>
+    `;
+
+    if (media) {
+      var mediaElement = document.createElement('img');
+      mediaElement.setAttribute('src', URL.createObjectURL(media));
+      postElement.appendChild(mediaElement);
+    }
+
+    document.getElementById('post-list').appendChild(postElement);
+
+    document.getElementById('blog-title').value = '';
+    document.getElementById('blog-content').value = '';
+    document.getElementById('blog-media').value = null;
+  });
+
+
+  document.getElementById('blog-form').addEventListener('submit', function(event) {
+    // Código existente para crear la publicación
+
+    // Crear botón de eliminar
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.addEventListener('click', function() {
+      eliminarPublicacion(postElement); // Llamar a la función eliminarPublicacion
+    });
+    postElement.appendChild(deleteButton);
+
+
+    // Código existente para limpiar el formulario
+  });
+  document.getElementById('blog-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var title = document.getElementById('blog-title').value;
+    var content = document.getElementById('blog-content').value;
+    var media = document.getElementById('blog-media').files[0];
+
+    var postElement = document.createElement('div');
+    postElement.classList.add('post');
+    postElement.innerHTML = `
+      <h3>${title}</h3>
+      <p>${content}</p>
+    `;
+
+    if (media) {
+      var mediaElement = document.createElement('img');
+      mediaElement.setAttribute('src', URL.createObjectURL(media));
+      postElement.appendChild(mediaElement);
+    }
+
+    
+    postElement.appendChild(deleteButton);
+
+    document.getElementById('post-list').appendChild(postElement);
+
+    document.getElementById('blog-title').value = '';
+    document.getElementById('blog-content').value = '';
+    document.getElementById('blog-media').value = null;
+  });
+  var user = {
+  name: "Angelina Genoud",
+  avatar: "images/jk.webp",
+};
+
+document.getElementById('blog-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var title = document.getElementById('blog-title').value;
+  var content = document.getElementById('blog-content').value;
+  var category = document.getElementById('blog-category').value;
+  var media = document.getElementById('blog-media').files[0];
+
+  var postElement = document.createElement('div');
+  postElement.classList.add('post');
+  postElement.innerHTML = `
+    <div class="user-info">
+      <img src="${user.avatar}" alt="${user.name}" class="user-avatar"> ${user.name}
+    </div>
+    <h3>${title}</h3>
+    <p>${content}</p>
+    <div class="post-details">
+      Categoría: ${category} | Fecha de publicación: ${new Date().toLocaleDateString()}
+    </div>
+  `;
+});
+</script>
+<style>
+
+section {
+    margin-bottom: 20px;
+  }
+
+  form input, form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  main  {
+    background-color: #f7f7f7;
+    font-family: Arial;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form input,
+  form textarea {
+    border: none;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #66c2ff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-file-upload:hover {
+  background-color: #4da8ff;
+}
+
+  button[type="submit"] {
+    background-color: #66c2ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+ 
+
+  .post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .post h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .post p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .post img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+
+  .post button {
+    background-color: #ccc;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+    .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .user-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+    .post {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px; /* Hacer las esquinas redondeadas */
+      margin-bottom: 20px;
+    }
+    .post h3 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .post .post-details {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+</style>
+<br>
+<br>
+  <footer>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="logito.png" alt="" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Satori kai</a> todos los derechos reservados.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+      document.querySelector('[data-modal-open]').addEventListener("click", function() {
+  document.querySelector('.modal').style.display = "block";
+});
+
+    // Verificar si el usuario ya está registrado
+    const userRegistered = localStorage.getItem("userRegistered");
+    
+    // Si el usuario no está registrado, mostrar el modal
+    if (!userRegistered) {
+      document.querySelector('[data-modal]').style.display = "block";
+    }
+  
+    // Manejar el envío del formulario
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario para el ejemplo
+            
+      // Ocultar el modal después del registro
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  
+    // Manejar el cierre del modal
+    document.querySelector('[data-modal-close]').addEventListener("click", function() {
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  </script>
+</body>
+</html>

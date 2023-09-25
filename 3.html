@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satori Kai</title>
+  <link rel="shortcut icon" href="logito.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href=https://www.facebook.com/profile.php?id=100093318325565" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Satorikaiweb" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/plataformasatorikai/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@Satorikai" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div class="header-alert-news" >
+          <p>
+            <b>¿Estás interesado en expandir tus conocimientos?</b>
+          </p>
+        </div>
+        <style>
+          .header-alert-news {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          </style>
+      </div>
+  
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="index.html" class="header-logo">
+          <img src="logo.png" alt="Mori yuki" width="45" height="40">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Buscar..."
+                 data-keywords="buzo hoodie sweatshirt sweater">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        
+
+        <div class="header-user-actions">
+
+          <div class="header-user-actions">
+            <button class="action-btn" data-modal-open id="openModalBtn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+          </div>   
+          <script>
+            document.getElementById("openModalBtn").addEventListener("click", function() {
+                window.location.href = "modal.html";
+            });
+            </script>       
+        
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Inicio</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="Explorar.html" class="menu-title">Explora</a>
+
+            
+          </li>
+
+          <li class="menu-category">
+            <a href="perfiles.html" class="menu-title">Perfiles</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="foro.html" class="menu-title">Foro de discusión</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="blog.html" class="menu-title">Blogs</a>
+
+      
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    
+
+  </header>
+<br>
+  <main>
+    <style type="text/css">
+
+      main .seccion-perfil-usuario .perfil-usuario-body,
+      main .seccion-perfil-usuario {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-header {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          background: linear-gradient(#8edbf3, transparent);
+          margin-bottom: 1.25rem;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-portada {
+          display: block;
+          position: relative;
+          width: 90%;
+          height: 17rem;
+          background-image: linear-gradient(45deg, #6abcf3, #9bc4ff);
+          border-radius: 0 0 20px 20px;
+
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          border: 0;
+          border-radius: 8px;
+          padding: 12px 25px;
+          background-color: rgba(0, 0, 0, .5);
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-portada .boton-portada i {
+          margin-right: 1rem;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-avatar {
+          display: flex;
+          width: 180px;
+          height: 180px;
+          align-items: center;
+          justify-content: center;
+          border: 7px solid #FFFFFF;
+          background-color: #DFE5F2;
+          border-radius: 50%;
+          box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+          position: absolute;
+          bottom: -40px;
+          left: calc(50% - 90px);
+          z-index: 1;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-avatar img {
+          width: 100%;
+          position: relative;
+          border-radius: 50%;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+          position: absolute;
+          left: -2px;
+          top: -2px;
+          border: 0;
+          background-color: #fff;
+          box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-body {
+          width: 70%;
+          position: relative;
+          max-width: 750px;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-body .titulo {
+          display: block;
+          width: 100%;
+          font-size: 1.75em;
+          margin-bottom: 0.5rem;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-body .texto {
+          color: #848484;
+          font-size: 0.95em;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-footer,
+      main .seccion-perfil-usuario .perfil-usuario-bio {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 1.5rem 2rem;
+          box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+          background-color: #fff;
+          border-radius: 15px;
+          width: 100%;
+      }
+      
+      main .seccion-perfil-usuario .perfil-usuario-bio {
+          margin-bottom: 1.25rem;
+          text-align: center;
+      }
+      
+      main .seccion-perfil-usuario .lista-datos {
+          width: 50%;
+          list-style: none;
+      }
+      
+      main .seccion-perfil-usuario .lista-datos li {
+          padding: 5px 0;
+      }
+      
+      main .seccion-perfil-usuario .lista-datos li>.icono {
+          margin-right: 1rem;
+          font-size: 1.2rem;
+          vertical-align: middle;
+      }
+      
+      main .seccion-perfil-usuario .redes-sociales {
+          position: absolute;
+          right: calc(0px - 50px - 1rem);
+          top: 0;
+          display: flex;
+          flex-direction: column;
+      }
+      
+      main .seccion-perfil-usuario .redes-sociales .boton-redes {
+          border: 0;
+          background-color: #fff;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          color: #fff;
+          box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+          font-size: 1.3rem;
+      }
+      
+      main .seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
+          margin-top: .5rem;
+      }
+      
+      main .seccion-perfil-usuario .boton-redes.facebook {
+          background-color: #5955FF;
+      }
+      
+      main .seccion-perfil-usuario .boton-redes.twitter {
+          background-color: #35E1BF;
+      }
+      
+      main .seccion-perfil-usuario .boton-redes.instagram {
+          background: linear-gradient(45deg, #FF2DFD, #40A7FF);
+      }
+            @media (max-width: 750px) {
+          main .seccion-perfil-usuario .lista-datos {
+              width: 100%;
+          }
+      
+          main .seccion-perfil-usuario .perfil-usuario-portada,
+          main .seccion-perfil-usuario .perfil-usuario-body {
+              width: 95%;
+          }
+      
+          main .seccion-perfil-usuario .redes-sociales {
+              position: relative;
+              flex-direction: row;
+              width: 100%;
+              left: 0;
+              text-align: center;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              align-items: center;
+              justify-content: center
+          }
+      
+          main .seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
+              margin-left: 1rem;
+              margin-top: 0;
+          }
+      }
+      </style>
+
+          <section class="seccion-perfil-usuario">
+              <div class="perfil-usuario-header">
+                  <div class="perfil-usuario-portada">
+                    
+                      <div class="perfil-usuario-avatar">
+                          <img src="descarga.png" alt="img-avatar">
+                          <button type="button" class="boton-avatar">
+                              <i class="far fa-image"></i>
+                          </button>
+                      </div>
+                      <button type="button" class="boton-portada">
+                          <i class="far fa-image"></i> Cambiar fondo
+                      </button>
+                  </div>
+              </div>
+              <div class="perfil-usuario-body">
+                <div class="perfil-usuario-bio">
+                    <h3 class="titulo">Emily Johnson</h3>
+                    <p class="texto">Profesora de literatura en un instituto, amo enseñar y mostrar mi conocimientos.</p>
+                </div>
+                <div class="perfil-usuario-footer">
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-phone-alt"></i> Telefono:091772891</li>
+                        <li><i class="icono fas fa-briefcase"></i> Trabaja en instituto del libro.</li>
+                        <li><i class="icono fas fa-building"></i> Cargo profesora</li>
+                    </ul>
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento 3 de enero</li>
+                        <li><i class="icono fas fa-user-check"></i> Registro.</li>
+                        <li><i class="icono fas fa-share-alt"></i> Redes sociales @Emily_Johnson.</li>
+                    </ul>
+                </div>
+                <div class="redes-sociales">
+                    <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
+                    <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
+                    <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+                </div>
+            </div>
+          </section>
+
+
+	
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+          main{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            scroll-padding-top: 2rem;
+            box-sizing: border-box;
+          }
+          
+          /* root values */
+          :root{
+            --container-color: #1a1e21;
+            --second-color: rgba(77, 228, 255);
+            --text-color: #172317;
+            --bg-color: #fff;
+          }
+          
+          ::selection{
+            color: var(--bg-color);
+            background: var(--second-color);
+          }
+          
+          main a{
+            text-decoration: none;
+          }
+          
+          main li{
+            list-style: none;
+          }
+          
+          main img{
+            width: 100%;
+          }
+          
+          
+          main .container{
+            max-width: 1068px;
+            margin: auto;
+            width: 100%;
+          }
+          
+          main a{
+            color: #fff;
+          }
+          
+          
+          main .about .contentBx{
+            max-width: 50%;
+            width: 50%;
+            text-align: left;
+            padding-right: 40px;
+          }
+          
+          main .titleText{
+            font-weight: 600;
+            color: #111;
+            font-size: 2rem;
+            margin-bottom: 10px;
+          }
+          
+          main .title-text{
+            color: #111;
+            font-size: 1em;
+          }
+          
+          main .about .imgBx{
+            position: relative;
+            min-width: 50%;
+            width: 50%;
+            min-height: 500px;
+          }
+          
+          main .btn2{
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background: #fff;
+            border: .8px solid #111;
+            color: #333;
+            text-decoration: none;
+            transition: 0.5s;
+          }
+          
+          main .btn2:hover{
+            background-color: var(--second-color);
+            border: none;
+            color: #fff;
+          }
+          
+          main .post-filter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1.5rem;
+            margin-top: 2rem !important;
+          }
+          
+          main .filter-item{
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+          }
+          
+          main  .active-filter{
+            background: var(--second-color);
+            color: var(--bg-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+          }
+          
+          main .post{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+            justify-content: center;
+            gap: 1.5rem;
+          }
+          
+          main .post-box{
+            background: var(--bg-color);
+            box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);
+            padding: 15px;
+            border-radius: 0.5rem;
+          }
+          
+          main .post-img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0.5rem;
+          }
+          
+          main  .category{
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--second-color);
+          }
+          
+          main .post-title{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-color);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          
+          main .post-date{
+            display: flex;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            margin-top: 4px;
+            font-weight: 400;
+          }
+          
+          main .post-description{
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            margin: 5px 0 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          
+          main .profile{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          
+          main .profile-img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 2px solid var(--second-color);
+          }
+          
+          main .profile-name{
+            font-size: .8rem;
+            font-weight: 500;
+          }
+          
+          main .sci{
+            margin: 20px;
+            display: flex;
+          }
+          
+          main .sci li{
+            list-style: none;
+          }
+          
+          main .sci li a{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: .5s;
+          }
+          
+          main .sci li a:hover{
+            background: rgb(77, 228, 255);
+          }
+          
+          main .sci i a .bx{
+            color: #fff;
+            font-size: 20px;
+          }
+          
+          main .quicklinks{
+            position: relative;
+            width: 25%;
+          }
+          
+          main .quicklinks ul li{
+            list-style: none;
+          }
+          
+          main .quicklinks ul li a{
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: .3s;
+          }
+          
+          main  .quicklinks ul li a:hover{
+            color: #fff;
+          }
+          
+          main  .footer-container .contactBx{
+            width: calc(35% - 60px);
+            margin-right: 0 !important;
+          }
+          
+          main .contactBx .info{
+            position: relative;
+          }
+          
+          main .contactBx .info li{
+            display: flex !important;
+            margin-bottom: 16px;
+          }
+          
+          main .contactBx .info li span:nth-child(1){
+            color: #fff;
+            font-size: 20px;
+            margin-right: 10px;
+          }
+          
+          main  .contactBx .info li span{
+            color: #999;
+          }
+          
+          main  .contactBx .info li a{
+            color: #999;
+            text-decoration: none;
+            transition: .5s;
+          }
+          
+          main  .contactBx .info li a:hover{
+            color: #fff;
+          }
+          
+          @media (max-width: 1060px){
+            main   .container{
+              margin: 0 auto;
+              width: 95%;
+            }
+          
+            main  .home-text{
+              width: 100%
+            }
+          }
+          
+    
+        
+          </style> 
+    
+          <br>
+          <br>
+
+          <div class="post">
+            <div class="post-box lit">
+                <div class="profile">
+					<img src="descarga.png" alt="" class="profile-img">
+					<span class="profile-name">Emily Johnson</span>
+				</div>
+        <br>
+
+				<img src="realismo-magico.jpg" alt="" class="post-img">
+        <br>
+
+				<h2 class="category">Literatura</h2>
+				<a href="post4.html" class="post-title">Realismo Mágico en la Literatura	</a>
+				<span class="post-date">12 Feb 2023</span>
+				<p class="post-description">El Realismo Mágico es un estilo literario que se originó en América Latina durante el siglo XX, aunque también... </p>
+				
+			</div>
+          </div>
+          
+
+<br>
+<br>
+
+<div class="post">
+
+    <div class="post-box lit">
+        <div class="profile">
+            <img src="descarga.png" alt="" class="profile-img">
+            <span class="profile-name">Emily Johnson</span>
+        </div>
+        <br>
+
+        <img src="document.png" alt="" class="post-img">
+        <br>
+
+        <h2 class="category">Literatura</h2>
+        <a href="post5.html" class="post-title">Descubriendo el Mundo de la Literatura: Un Viaje a Través de las Letras</a>
+        <span class="post-date">3 Ene 2023</span>
+        <p class="post-description">Nuestra travesía literaria comienza con los clásicos. Obras maestras como "Don Quijote de la Mancha" de cer...</p>
+    </div>
+</div>
+
+  
+<br>
+<br>
+
+<div class="post">
+    
+    <div class="post-box lit">
+        <div class="profile">
+            <img src="descarga.png" alt="" class="profile-img">
+            <span class="profile-name">Emily Johnson</span>
+        </div>
+        <br>
+
+        <img src="Géneros Literarios.jpg" alt="" class="post-img">
+        <br>
+
+        <h2 class="category">Literatura</h2>
+        <a href="post6.html" class="post-title">Explorando la Literatura: Un Viaje a Través de los Géneros Literarios</a>
+        <span class="post-date">12 Dic 2022</span>
+        <p class="post-description">La literatura es un mundo fascinante que nos transporta a diferentes épocas, lugares y emociones. Desde la ...</p>
+
+    </div>
+</div>
+
+  
+<br>
+<br>
+
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="logito.png" alt="payment method" class="payment-img">
+        <p class="copyright">
+          Copyright &copy; <a href="#">Satori kai</a> todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+      document.querySelector('[data-modal-open]').addEventListener("click", function() {
+  document.querySelector('.modal').style.display = "block";
+});
+
+    // Verificar si el usuario ya está registrado
+    const userRegistered = localStorage.getItem("userRegistered");
+    
+    // Si el usuario no está registrado, mostrar el modal
+    if (!userRegistered) {
+      document.querySelector('[data-modal]').style.display = "block";
+    }
+  
+    // Manejar el envío del formulario
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario para el ejemplo
+            
+      // Ocultar el modal después del registro
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  
+    // Manejar el cierre del modal
+    document.querySelector('[data-modal-close]').addEventListener("click", function() {
+      document.querySelector('[data-modal]').style.display = "none";
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
